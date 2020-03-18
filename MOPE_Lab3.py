@@ -119,7 +119,7 @@ t3 = abs(beta3)/sbs
 f3 = f1*f2
 ttabl  = 2.306
 print("f3 = f1*f2, з таблиці tтабл = 2.306")
-#print(t0,t1,t2,t3)
+
 if (t0<ttabl):
     print("t0<ttabl, b0 не значимий")
     b0=0
@@ -145,7 +145,7 @@ sad = ((yy1 - ySr1)**2 + (yy2 - ySr2)**2 + (yy3 - ySr3)**2 + (yy4 - ySr4)**2)*(m
 Fp = sad/sb
 print("d1=", round(d1,2), "\nd2=", round(d2,2), "\nd3=", round(d3,2), "\nd4=", round(d4,2), "\nd5=", round(sb,2))
 print("Fp=", round(Fp,2))
-print('Ft берем із таблиці 8 рядяк 2 стовпець Ft = 4.5')
+print('Ft берем із таблиці Ft = 4.5')
 Ft=4.5
 if Fp>Ft:
     print("Fp=",round(Fp,2),">Ft",Ft,"Отже, рівняння неадекватно оригіналу")
