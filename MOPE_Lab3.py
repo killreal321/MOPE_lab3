@@ -21,7 +21,7 @@ for i in range(4):
     print("{:<5} {:<5} {:<5} {:<5}".format(i+1,X11[i],X22[i],X33[i]))
 
 print("\nМатриця планування для m=3:")
-print("{:<5} {:<5} {:<5} {:<5} {:<5} {:<5} {:<5}".format("№","X1","X2","X3","Y1","Y2","Y3"))
+print("{:<5} {:<5} {:<5} {:<5} {:<5} {:<5} {:<5}".format("N","X1","X2","X3","Y1","Y2","Y3"))
 ymax = int(200+xSrmax)
 ymin = int(200+xSrmin)
 X1 = [x1min, x1min, x1max, x1max]
@@ -76,10 +76,10 @@ b3 = np.linalg.det(b31)/np.linalg.det(b32)
 print("\nОтримані детермінанти:", "\nb0=",b0, "\nb1=",b1, "\nb2=",b2, "\nb3=",b3)
 print("\nОтримане рівняння регресії:" "\n" "y=", b0,"+", "(",b1,")", "*x1","+", "(",b2,")","*x2", "+", "(",b3,")","*x3" )
 print("\nПеревірка:")
-print("y1av1="+str(round(b0 + b1*X1[0] + b2*X2[0] + b3*X3[0],2))+"="+ str(round(ySr1,2)))
-print("y2av2="+str(round(b0 + b1*X1[1] + b2*X2[1] + b3*X3[1],2))+"="+ str(round(ySr2,2)))
-print("y3av3="+str(round(b0 + b1*X1[2] + b2*X2[2] + b3*X3[2],2))+"="+ str(round(ySr3,2)))
-print("y4av4="+str(round(b0 + b1*X1[3] + b2*X2[3] + b3*X3[3],2))+"="+ str(round(ySr4,2)))
+print("ySr1="+str(round(b0 + b1*X1[0] + b2*X2[0] + b3*X3[0],2))+"="+ str(round(ySr1,2)))
+print("ySr2="+str(round(b0 + b1*X1[1] + b2*X2[1] + b3*X3[1],2))+"="+ str(round(ySr2,2)))
+print("ySr3="+str(round(b0 + b1*X1[2] + b2*X2[2] + b3*X3[2],2))+"="+ str(round(ySr3,2)))
+print("ySr4="+str(round(b0 + b1*X1[3] + b2*X2[3] + b3*X3[3],2))+"="+ str(round(ySr4,2)))
 print("Значення дорівнюють одне одному")
 
 print("\nПеревірка однорідності дисперсії за критерієм Кохрена:")
