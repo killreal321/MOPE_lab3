@@ -95,11 +95,15 @@ m = 3
 Gp = max(dcouple)/sum(dcouple)
 f1 = m-1
 f2 = N = 4
-Gt = 0.7679
-if Gp < Gt:
-    print("Дисперсія однорідна")
-else:
-    print("Дисперсія  неоднорідна")
+Gt = 0.2679
+#Gp < Gt
+print(Gp)
+for number in range(1):
+    if Gp < Gt:
+        print("Дисперсія  однорідна")
+    else:
+        print("\nДисперсія неоднорідна, отже не переходимо до перевірки Стьюдента\n")
+        exit(0)
 print("\nЗначимість коефіцієнтів регресії згідно критерію Стьюдента:")
 sb = sum(dcouple)/N
 sb2 = sb/N*m
@@ -137,6 +141,8 @@ yy1 = b0 + b1*x1min + b2*x2min + b3*x3min
 yy2 = b0 + b1*x1min + b2*x2max + b3*x3max
 yy3 = b0 + b1*x1max + b2*x2min + b3*x3max
 yy4 = b0 + b1*x1max + b2*x2max + b3*x3min
+
+
 print("\nКритерій Фішера")
 d = 2
 print("Кількість зачимих коефіціентів:", d)
@@ -148,6 +154,6 @@ print("Fp=", round(Fp,2))
 print('Ft берем із таблиці Ft = 4.5')
 Ft=4.5
 if Fp>Ft:
-    print("Fp=",round(Fp,2),">Ft",Ft,"Отже, рівняння неадекватно оригіналу")
+   print("Fp=",round(Fp,2),">Ft",Ft,"Отже, рівняння неадекватно оригіналу")
 else:
-    print("Fp=",round(Fp,2),"<Ft",Ft,"Отже, рівняння адекватно оригіналу")
+   print("Fp=",round(Fp,2),"<Ft",Ft,"Отже, рівняння адекватно оригіналу")
